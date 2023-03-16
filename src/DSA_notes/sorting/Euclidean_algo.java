@@ -1,3 +1,5 @@
+package DSA_notes.sorting;
+
 public class Euclidean_algo {
     public Euclidean_algo() {
     }

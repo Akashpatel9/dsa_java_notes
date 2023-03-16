@@ -1,3 +1,5 @@
+package DSA_notes.sorting;
+
 import java.util.Scanner;
 
 public class Newton_Formula_SQRT {

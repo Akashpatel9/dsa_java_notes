@@ -1,3 +1,5 @@
+package DSA_notes.sorting;
+
 public class Moores_Voting_Algo {
     public static void main(String[] args) {
 

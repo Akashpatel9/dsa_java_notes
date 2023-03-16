@@ -1,5 +1,5 @@
 
-package sorting;
+package DSA_notes.sorting;
 
 import java.util.Arrays;
 
