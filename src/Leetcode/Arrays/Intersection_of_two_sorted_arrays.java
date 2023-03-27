@@ -1,4 +1,4 @@
-package DSA_notes.sorting;
+package Leetcode.Arrays;
 
 import java.util.ArrayList;
 

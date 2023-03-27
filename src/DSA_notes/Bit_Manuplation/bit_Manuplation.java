@@ -1,4 +1,4 @@
-package DSA_notes.sorting;
+package DSA_notes.Bit_Manuplation;
 
 class bit_Manuplation {
     bit_Manuplation() {
@@ -28,13 +28,6 @@ class bit_Manuplation {
     public static int clearLastI_bits(int n, int i) {
         int bitmask = -1 << i;
         return bitmask & n;
-    }
-
-    public static int clearRangeOf_bits(int n, int i, int j) {
-        int s = (2 << i) - 1;
-        int e = -1 << j + 1;
-        int c = s | e;
-        return n & c;
     }
 
     public static boolean chack2_pow(int n) {

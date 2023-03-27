@@ -1,4 +1,4 @@
-package DSA_notes.sorting;
+package DSA_notes.Array;
 
 public class Moores_Voting_Algo {
     public static void main(String[] args) {

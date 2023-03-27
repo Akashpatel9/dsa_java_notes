@@ -1,4 +1,4 @@
-package DSA_notes.sorting;
+package DSA_notes.Maths;
 import java.util.*;
 public class Prime_Sieve_of_Eratosthenes {
     public static void main(String[] args) {

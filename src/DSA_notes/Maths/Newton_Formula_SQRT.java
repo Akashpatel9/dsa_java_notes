@@ -1,4 +1,4 @@
-package DSA_notes.sorting;
+package DSA_notes.Maths;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package DSA_notes.sorting;
+package DSA_notes.shorting;
 
 import java.util.Arrays;
 
@@ -36,7 +36,7 @@ public class quickSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{24, 18, 38, 43, 14, 40, 55, 54};
+        int[] arr = {4,2,6,3,9,2,7,5,4};
         quickS(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
