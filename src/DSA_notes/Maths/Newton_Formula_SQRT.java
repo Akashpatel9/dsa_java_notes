@@ -10,10 +10,13 @@ public class Newton_Formula_SQRT {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        long i;
-        for(i = (long)n; i * i > (long)n; i = (i + (long)n / i) / 2L) {
+        long i=n;
+        while (i*i>n){
+            i=(i+(n/i))/2;
         }
 
         System.out.println(i);
+
+
     }
 }
