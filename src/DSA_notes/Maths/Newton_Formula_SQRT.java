@@ -3,9 +3,6 @@ package DSA_notes.Maths;
 import java.util.Scanner;
 
 public class Newton_Formula_SQRT {
-    public Newton_Formula_SQRT() {
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -16,6 +13,7 @@ public class Newton_Formula_SQRT {
         }
 
         System.out.println(i);
+
 
 
     }

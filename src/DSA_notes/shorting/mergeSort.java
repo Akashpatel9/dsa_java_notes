@@ -37,9 +37,8 @@ public class mergeSort {
             tem[in++] = arr[j++];
         }
 
-        int k = 0;
 
-        for(int ii = l; k < tem.length; ++ii) {
+        for(int ii = l,k=0; k < tem.length; ++ii) {
             arr[ii] = tem[k];
             ++k;
         }

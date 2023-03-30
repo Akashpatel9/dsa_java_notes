@@ -11,17 +11,15 @@ public class Selection_Short {
 
         for(int i = 0; i < arr.length - 1; ++i) {
             int curr = i;
-
-            int j;
-            for(j = i + 1; j < arr.length; ++j) {
+            for(int j = i + 1; j < arr.length; ++j) {
                 if (arr[curr] > arr[j]) {
                     curr = j;
                 }
             }
 
-            j = arr[curr];
+            int tem= arr[curr];
             arr[curr] = arr[i];
-            arr[i] = j;
+            arr[i] = tem;
         }
 
         System.out.println(Arrays.toString(arr));

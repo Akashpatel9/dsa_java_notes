@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-class LinkedList {
+ class LinkedList {
     public class Node {
         int val;
         Node next;
@@ -215,32 +215,6 @@ class LinkedList {
     }
 
 
-
-    //delete nth node
-    public int remove_nth(int ind) {
-        if (size==0 || ind<0 || ind>=size){
-            System.out.println("invalid index");
-            return Integer.MAX_VALUE;
-        }
-        else if (ind==0){
-            int val = head.val;
-            remove_first();
-            return val;
-        }else if (ind==size-1){
-            int val=tail.val;
-            remove_last();
-            return val;
-        }
-        Node tem = head;
-        for (int i = 0; i < ind-1; i++) {
-            tem=tem.next;
-        }
-        int val = tem.next.val;
-        tem.next=tem.next.next;
-        size--;
-        return val;
-    }
-
     //delete nth node from last;
     public int remove_last_nth(int ind){
         if(head==null){
@@ -255,7 +229,8 @@ class LinkedList {
             int val = head.val;
             remove_first();
             return val;
-        } else if (ind==0) {
+        }
+        else if (ind==0) {
             int val = tail.val;
             remove_last();
             return val;
@@ -266,12 +241,12 @@ class LinkedList {
         for (int i = 0; i <idx; i++) {
             tem=tem.next;
         }
-
         int val = tem.next.val;
         tem.next=tem.next.next;
         return val;
     }
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
+
     }
 }

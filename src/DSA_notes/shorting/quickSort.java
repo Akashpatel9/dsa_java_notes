@@ -19,16 +19,16 @@ public class quickSort {
         int i = s - 1;
 
         int j;
-        for(j = s; j < e; ++j) {
+        for(j = s; j < e; j++) {
             if (arr[j] < piv) {
-                ++i;
+                i++;
                 int tem = arr[i];
                 arr[i] = arr[j];
                 arr[j] = tem;
             }
         }
 
-        ++i;
+        i++;
         j = arr[i];
         arr[i] = piv;
         arr[e] = j;
