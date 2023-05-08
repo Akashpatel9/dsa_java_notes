@@ -245,8 +245,13 @@ import java.util.Set;
         tem.next=tem.next.next;
         return val;
     }
+
+//    public static void murg_sort(Node head , int s , int e){
+//
+//    }
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
 
+        System.out.println(Character.isAlphabetic('a'));
     }
 }

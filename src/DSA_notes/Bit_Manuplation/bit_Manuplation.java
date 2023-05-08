@@ -30,34 +30,47 @@ class bit_Manuplation {
         return bitmask & n;
     }
 
-    public static boolean chack2_pow(int n) {
+    public static boolean check_2_pow(int n) {
+        //(4)=  100 & (3)=011 == 000
         return (n & n - 1) == 0;
     }
 
     public static int count_set_bits(int n) {
-        int c;
-        for(c = 0; n > 0; n >>= 1) {
+        int c = 0;
+        while (n != 0) {
             if ((1 & n) != 0) {
-                ++c;
+                c++;
             }
+            n = n >> 1;
         }
-
         return c;
     }
 
     public static int fast_Expo(int n, int p) {
-        int ans;
-        for(ans = 1; n > 0; n >>= 1) {
-            if ((n & 1) != 0) {
-                ans *= p;
-            }
+        int ans = 1;
+        while (n != 0) {
+            if ((n & 1) != 0) ans *= p;
 
             p *= p;
+            n = n >> 1;
         }
-
         return ans;
     }
 
+
+    public static int modular_Expo(int n, int p) {
+        int ans = 1;
+        while (n != 0) {
+            if ((n & 1) != 0) ans *= p;
+
+            p *= p;
+            n = n >> 1;
+        }
+        return ans;
+    }
+
+
     public static void main(String[] args) {
+
     }
 }
