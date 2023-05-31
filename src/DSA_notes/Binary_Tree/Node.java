@@ -5,7 +5,7 @@ public class Node {
     public Node Right;
     public int val;
 
-    Node(int val) {
+    public Node(int val) {
         this.val = val;
         this.Left = null;
         this.Right = null;
