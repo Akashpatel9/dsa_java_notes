@@ -43,10 +43,6 @@ public class Priorityqueue {
             heapify(minIdx);
         }
     }
-
-//    public void heapSort(){
-//
-//    }
     
     public Integer peek(){
         if (heap.isEmpty())return null;
