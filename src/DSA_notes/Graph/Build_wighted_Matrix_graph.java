@@ -16,7 +16,7 @@ public class Build_wighted_Matrix_graph {
 
         graph[2][4] = 2;
 
-        for (int i = 0; i < graph.length; i++) {
+        for (int i = 0; i <= v; i++) {
             System.out.print(i+"->");
             for (int j = 0; j < graph[i].length; j++) {
                 if (graph[i][j]!=0) {
@@ -25,6 +25,15 @@ public class Build_wighted_Matrix_graph {
             }
             System.out.println();
         }
+
+
+
+
+
+
+
+
+
 
     }
 }

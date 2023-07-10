@@ -1,12 +1,10 @@
 package DSA_notes.Graph;
 
-import javax.swing.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class dijkstra_algo_sortest_dis {
+public class Prims_algo_MST {
     public static void main(String[] args) {
         ArrayList<ArrayList<Edge>> graph = new ArrayList<>();
 
@@ -28,41 +26,47 @@ public class dijkstra_algo_sortest_dis {
         graph.get(2).add(new Edge(2, 4, 2));
         graph.get(4).add(new Edge(4, 2, 2));
 
+        graph.get(3).add(new Edge(3, 1, 3));
+        graph.get(1).add(new Edge(1, 3, 3));
+
+        graph.get(4).add(new Edge(4, 3, 1));
+        graph.get(3).add(new Edge(3, 4, 1));
+
 
         PriorityQueue<Pair> pq = new PriorityQueue<>(new Comparator<Pair>() {
             @Override
             public int compare(Pair o1, Pair o2) {
-                return o1.d-o2.d;
+                return o1.d - o2.d;
             }
         });
 
         boolean vis[] = new boolean[v];
 
-        int dis[] = new int[v];
+        pq.offer(new Pair(0, 0));
 
-        Arrays.fill(dis,Integer.MAX_VALUE);
+        int totalDis = 0;
 
-        pq.offer(new Pair(0,0));
+        ArrayList<Integer> path = new ArrayList<>();
 
-        dis[0]=0;
 
-        while (!pq.isEmpty()){
-            Pair s = pq.poll();
-            int curr = s.v;
-            if (!vis[curr]){
-                vis[curr]=true;
-                for (Edge neb : graph.get(curr)){
-                    int ver = neb.destination;
-                    int ver_wei = neb.weight;
-                    if (dis[curr] + ver_wei < dis[ver]){
-                        pq.offer(new Pair(ver ,dis[curr] + ver_wei ));
-                        dis[ver] = dis[curr] + ver_wei ;
-                    }
+        while (!pq.isEmpty()) {
+            Pair curr = pq.poll();
+
+            if (!vis[curr.v]) {
+                vis[curr.v] = true;
+                totalDis += curr.d;
+                path.add(curr.v);
+
+                for (Edge neb : graph.get(curr.v)) {
+                    pq.offer(new Pair(neb.destination, neb.weight));
                 }
             }
+
         }
 
-        System.out.println(Arrays.toString(dis));
+
+        System.out.println(totalDis);
+        System.out.println(path);
 
     }
 }

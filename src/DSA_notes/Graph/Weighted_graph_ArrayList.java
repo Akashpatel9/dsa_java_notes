@@ -7,9 +7,9 @@ public class Weighted_graph_ArrayList {
 
         ArrayList<ArrayList<Edge>> graph = new ArrayList<>();
 
-        int v = 4;  // No of vortex / Nodes
+        int v = 5;  // No of vortex / Nodes
 
-        for (int i = 0; i <= 4; i++) {
+        for (int i = 0; i < v; i++) {
             graph.add(new ArrayList<>());
         }
 
