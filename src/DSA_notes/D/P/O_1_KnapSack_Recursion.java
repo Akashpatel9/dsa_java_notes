@@ -17,7 +17,6 @@ public class O_1_KnapSack_Recursion {
         int wt[] = {2, 5, 1, 3, 4};
         int t_w = 7;
 
-        System.out.println(solve(val,wt,0,t_w));
-
+        System.out.println(solve(val,wt,0,t_w));;
     }
 }
