@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class dijkstra_algo_sortest_dis_Matrix {
     public static void main(String[] args) {
-        int v = 8, e = 14;
-        int[][] graph = new int[v + 1][v + 1];
+        int v = 9, e = 14;
+        int[][] graph = new int[v][v];
 
         graph[0][1] = 4;
         graph[1][0] = 4;
@@ -51,15 +51,15 @@ public class dijkstra_algo_sortest_dis_Matrix {
 
 
 
-        boolean []vis = new boolean[v+1];
+        boolean []vis = new boolean[v];
 
-        int []dis = new int[v+1];
+        int []dis = new int[v];
 
         Arrays.fill(dis,Integer.MAX_VALUE);
 
         dis[0]=0;
 
-        for (int i = 0; i < v+1; i++) {
+        for (int i = 0; i < v; i++) {
 
             int min_w = Integer.MAX_VALUE, min_i = -1;
             for (int j = 0; j < dis.length; j++) {
@@ -71,7 +71,7 @@ public class dijkstra_algo_sortest_dis_Matrix {
 
             vis[min_i] = true;
 
-            for (int j = 0; j < v+1; j++) {
+            for (int j = 0; j < v; j++) {
                 if(!vis[j] && graph[min_i][j] != 0 && dis[j] > dis[min_i] + graph[min_i][j]){
                     dis[j] = dis[min_i] + graph[min_i][j];
                 }
