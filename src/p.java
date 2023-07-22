@@ -1,23 +1,15 @@
 class p{
-    public static int fn(int []coins, int amount){
-        if(amount==0)return 0;
-        int ans = Integer.MAX_VALUE;
-        for(int j = 0;j<coins.length;j++){
-            if(amount-coins[j]>=0){
-                int c = fn(coins,amount-coins[j]);
-                if(c!=Integer.MAX_VALUE && c+1 < ans){
-                    ans = c+1;
-                }
-            }
-        }
-        return ans;
+    public static int fn(int n , int k){
+        if (n==1) return k;
+        if (n==2) return k*(k-1)+k;
+        return (fn(n-2,k) + fn(n-1,k)) * (k-1);
     }
     public static void main(String[] args) {
 
-        int arr[] = {1,2,5};
-        int t = 7;
+        int n = 2;
+        int c = 4;
 
-        System.out.println(fn(arr,t));
+        System.out.println(fn(n,c));
 
     }
 }
