@@ -84,7 +84,7 @@ public class O_1_KnapSack_Recursion {
     }
 
 
-    public static int solveUsingVer(int[] wt, int[] val, int w) {
+    public static int solveUsingSpace_OPt(int[] wt, int[] val, int w) {
         int n = wt.length;
         int[] pre = new int[w + 1];
         int[] curr = new int[w + 1];
@@ -130,7 +130,7 @@ public class O_1_KnapSack_Recursion {
 
 //        System.out.println(solveUsingTab(wt, val, w));
 
-        System.out.println(solveUsingVer(wt, val, w));
+        System.out.println(solveUsingSpace_OPt(wt, val, w));
 
     }
 }
