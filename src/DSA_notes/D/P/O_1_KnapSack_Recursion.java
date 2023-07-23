@@ -77,7 +77,37 @@ public class O_1_KnapSack_Recursion {
                 dp[i][j] = Math.max(inc, exc);
             }
         }
+        for (int i = 0; i < n; i++) {
+            System.out.println(Arrays.toString(dp[i]));
+        }
         return dp[n - 1][w];
+    }
+
+
+    public static int solveUsingVer(int[] wt, int[] val, int w) {
+        int n = wt.length;
+        int[] pre = new int[w + 1];
+        int[] curr = new int[w + 1];
+
+        for (int i = wt[0]; i < w + 1; i++) {
+            if (i >= wt[0]) pre[i] = val[0];
+            else pre[i] = 0;
+        }
+
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j < w + 1; j++) {
+                int inc = 0;
+                if (j - wt[i] >= 0) {
+                    inc = val[i] + pre[j - wt[i]];
+                }
+                int exc = pre[j];
+
+                curr[j] = Math.max(inc, exc);
+            }
+            for(int e=0;e< curr.length;e++) pre[e] = curr[e];
+        }
+
+        return pre[w];
     }
 
 
@@ -86,19 +116,21 @@ public class O_1_KnapSack_Recursion {
         int[] val = {1, 2, 3};
         int w = 3;
 
-        int n = wt.length;
-
-        int[][] dp = new int[n][w + 1];
-
-        for (int i = 0; i < n; i++) {
-            Arrays.fill(dp[i], -1);
-        }
+//        int n = wt.length;
+//
+//        int[][] dp = new int[n][w + 1];
+//
+//        for (int i = 0; i < n; i++) {
+//            Arrays.fill(dp[i], -1);
+//        }
 
 //        System.out.println(solveUsingRec(wt, val, w, n - 1));
 
 //        System.out.println(solveUsingMem(wt, val, w, n - 1, dp));
 
-        System.out.println(solveUsingTab(wt, val, w));
+//        System.out.println(solveUsingTab(wt, val, w));
+
+        System.out.println(solveUsingVer(wt, val, w));
 
     }
 }
