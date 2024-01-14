@@ -3,17 +3,17 @@ package DSA_notes.LinkedList;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+public class Node {
+    int val;
+    Node next;
 
- class LinkedList {
-    public class Node {
-        int val;
-        Node next;
-
-        public Node(int val) {
-            this.val = val;
-            this.next = null;
-        }
+    public Node(int val) {
+        this.val = val;
+        this.next = null;
     }
+}
+ class LinkedList {
+
     public static Node head;
     public static Node tail;
     public int size;

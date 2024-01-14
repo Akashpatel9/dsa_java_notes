@@ -1,6 +1,9 @@
 package DSA_notes.shorting;
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Map;
+import java.util.PriorityQueue;
 
 public class quickSort {
     public quickSort() {
@@ -15,6 +18,8 @@ public class quickSort {
     }
 
     public static int par(int[] arr, int s, int e) {
+
+
         int piv = arr[e];
         int i = s - 1;
 

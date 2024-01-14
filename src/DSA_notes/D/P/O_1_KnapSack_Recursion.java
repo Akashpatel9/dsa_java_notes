@@ -56,13 +56,13 @@ public class O_1_KnapSack_Recursion {
 
         int[][] dp = new int[n][w + 1];
 
-        for (int j = 0; j < n; j++) {
-            dp[j][0] = 0;
-        }
+//        for (int j = 0; j < n; j++) {
+//            dp[j][0] = 0;
+//        }
 
         for (int i = 0; i < w + 1; i++) {
             if (i >= wt[0]) dp[0][i] = val[0];
-            else dp[0][i] = 0;
+//            else dp[0][i] = 0;
         }
 
 
@@ -111,6 +111,32 @@ public class O_1_KnapSack_Recursion {
     }
 
 
+
+
+    public static int solveUsingSpace_OPt_O_N(int[] wt, int[] val, int w) {
+        int n = wt.length;
+
+        int[] curr = new int[w + 1];
+
+        for (int i = wt[0]; i < w + 1; i++) {
+            if (i >= wt[0]) curr[i] = val[0];
+        }
+
+        for (int i = 1; i < n; i++) {
+            for (int j = w; j >=1; j--) {
+                int inc = 0;
+                if (j - wt[i] >= 0) {
+                    inc = val[i] + curr[j - wt[i]];
+                }
+                int exc = curr[j];
+
+                curr[j] = Math.max(inc, exc);
+            }
+        }
+
+        return curr[w];
+    }
+
     public static void main(String[] args) {
         int[] wt = {4, 5, 1};
         int[] val = {1, 2, 3};
@@ -130,7 +156,8 @@ public class O_1_KnapSack_Recursion {
 
 //        System.out.println(solveUsingTab(wt, val, w));
 
-        System.out.println(solveUsingSpace_OPt(wt, val, w));
+//        System.out.println(solveUsingSpace_OPt(wt, val, w));
 
+        System.out.println(solveUsingSpace_OPt_O_N(wt, val, w));
     }
 }

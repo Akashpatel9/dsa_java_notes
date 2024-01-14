@@ -36,7 +36,7 @@ class compareByName implements Comparator<Student>{
     }
 }
 
-class comparator{
+public class comparator<I extends Number> {
     public static void main(String[] args){
         Student[] s = {new Student(46,"akahsd"),new Student(54,"iudhwa"),new Student(40,"uhfuieb")};
 //        Arrays.sort(s);

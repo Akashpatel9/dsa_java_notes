@@ -16,7 +16,6 @@ public class Selection_Short {
                     curr = j;
                 }
             }
-
             int tem= arr[curr];
             arr[curr] = arr[i];
             arr[i] = tem;

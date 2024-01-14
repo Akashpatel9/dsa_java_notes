@@ -25,6 +25,6 @@ public class permutation_array {
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
         ArrayList<Integer> al = new ArrayList<>();
         p(arr,0,al,ans);
-        System.out.println(ans);
+        System.out.println(ans.size());
     }
 }

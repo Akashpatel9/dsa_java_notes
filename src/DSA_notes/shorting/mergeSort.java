@@ -44,7 +44,6 @@ public class mergeSort {
         }
 
     }
-
     public static void main(String[] args) {
         int[] arr = new int[]{2, 7, 3, 5, 9, 4};
         mergeSort(arr, 0, arr.length - 1);

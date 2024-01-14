@@ -393,14 +393,15 @@ public class Binary_tree {
 
        */
 
-//        Node n = new Node(1);
-//        n.Left = new Node(2);
-//        n.Right = new Node(3);
-//        n.Left.Left = new Node(4);
-//        n.Left.Right = new Node(5);
-//        n.Right.Left = new Node(6);
-//        n.Right.Right = new Node(7);
+        Node n = new Node(1);
+        n.Left = new Node(2);
+        n.Right = new Node(3);
+        n.Left.Left = new Node(4);
+        n.Left.Right = new Node(5);
+        n.Right.Left = new Node(6);
+        n.Right.Right = new Node(7);
 
+        postorder_tra(n);
 //
 
 
